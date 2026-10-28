@@ -1,4 +1,4 @@
-# Daymark: a simple task manager
+# Bhuvan: a simple task manager
 
 A small, practical to-do app built with React, Vite, and Tailwind CSS. You can add, edit, delete, search, and filter tasks, and everything is saved in your browser, so your tasks are still there after a refresh or after you stop and restart the app. There is no backend, login, or database.
 
