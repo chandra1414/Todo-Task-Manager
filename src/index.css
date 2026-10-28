@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-paper: #eef3f1;
+  --color-chrome: #f8fbfa;
+  --color-surface: #ffffff;
+  --color-sand: #e2ebe8;
+  --color-line: #d9e2de;
+  --color-field: #86928c;
+
+  /* Text */
+  --color-ink: #1f2a26;
+  --color-ink-soft: #5a665f;
+
+  /* Accent */
+  --color-brand: #3f7a63;
+  --color-brand-dark: #2f6250;
+  --color-brand-tint: #dcebe3;
+
+  --color-avatar: #cfe0d6;
+  --color-danger: #a3342a;
+
+    /* Sidebar background */
+  --color-sidebar: #e2ece6;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button:not(:disabled),
+  label:has(input[type="checkbox"]) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
+
+/* Edit/Delete buttons: hidden until hover on mouse devices, always visible on touch. */
+@media (hover: hover) {
+  .task-row .task-actions {
+    opacity: 0;
+  }
+
+  .task-row:hover .task-actions,
+  .task-row:focus-within .task-actions {
+    opacity: 1;
+  }
+}
